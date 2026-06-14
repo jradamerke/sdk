@@ -9,6 +9,8 @@ class Component(object):
         summary: str,
         source_code_url: str,
     ) -> None:
+        is_valid = True
+        parsed_version = version.split(".")
         super().__init__()
         self.name = name
         self.version = version
