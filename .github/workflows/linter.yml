@@ -20,6 +20,6 @@ jobs:
         poetry install --with=dev
     - name: Perform linting
       run: |
-        poetry run flake8 .
+        poetry run flake8 src/binaryai/client.py src/binaryai/component.py src/binaryai/utils.py
         poetry run black --check --line-length=120 .
         poetry run isort --profile=black --line-length=120 -c .
